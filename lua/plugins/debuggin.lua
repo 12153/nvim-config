@@ -16,7 +16,7 @@ return {
       local dap = require("dap")
       local dapui = require("dapui")
 
-       -- Load VSCode-style launch.json
+      -- Load VSCode-style launch.json
       require("dap.ext.vscode").load_launchjs()
 
       -- Setup DAP UI
