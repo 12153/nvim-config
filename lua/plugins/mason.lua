@@ -14,7 +14,10 @@ return {
           "gopls",
           "rust_analyzer",
           "ts_ls",
-          "biome"
+          "biome",
+          "buf_ls",
+          "protolint",
+          "clangd",
         }
       })
     end
@@ -25,6 +28,15 @@ return {
       local lspconfig = require("lspconfig")
 
       local cap = require("cmp_nvim_lsp").default_capabilities()
+
+      -- Protobuf
+      lspconfig.buf_ls.setup({
+        capabilities = cap,
+      })
+
+      lspconfig.protolint.setup({
+        capabilities = cap,
+      })
 
       -- Lua
       lspconfig.lua_ls.setup({
