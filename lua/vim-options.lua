@@ -20,3 +20,10 @@ vim.opt.signcolumn = "yes"
 vim.keymap.set("n", "<leader>vs", ":vsplit<CR>", { desc = "Vertical Split" })
 vim.keymap.set("n", "<leader>hs", ":split<CR>", { desc = "Horizontal Split" })
 
+vim.keymap.set("n", ",,", ":norm A,<CR>", { desc = "append comma at end of line" })
+vim.keymap.set("n", ";;", ":norm A;<CR>", { desc = "append semi-colon at end of line" })
+
+-- vim.keymap.set("n", "ii", vim.)
+
+vim.api.nvim_set_option("clipboard","unnamed")
+
