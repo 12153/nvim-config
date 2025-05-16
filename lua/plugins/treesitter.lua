@@ -11,6 +11,8 @@ return {
         'python',
         'json',
         'yaml',
+        'rust',
+        'jinja'
       },
       highlight = { enable = true }, -- Enables syntax highlighting
       indent = { enable = true },    -- Enables Treesitter-based indentation

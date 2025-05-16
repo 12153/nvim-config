@@ -20,12 +20,12 @@ return {
       cmp.setup({
         snippet = {
           expand = function(args)
-            luasnip.lsp_expand(args.body) -- Use LuaSnip for snippets
+            luasnip.lsp_expand(args.body)
           end,
         },
         mapping = cmp.mapping.preset.insert({
           ["<C-Space>"] = cmp.mapping.complete(),
-          ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Confirm selection
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
           ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_next_item()
@@ -50,6 +50,7 @@ return {
           { name = "luasnip" },
           { name = "buffer" },
           { name = "path" },
+          { name = "gopls" },
         }),
       })
 

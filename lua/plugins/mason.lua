@@ -16,8 +16,10 @@ return {
           "ts_ls",
           "biome",
           "buf_ls",
-          "protolint",
           "clangd",
+          "jinja-lsp",
+          "jq",
+          "templ"
         }
       })
     end
@@ -31,10 +33,6 @@ return {
 
       -- Protobuf
       lspconfig.buf_ls.setup({
-        capabilities = cap,
-      })
-
-      lspconfig.protolint.setup({
         capabilities = cap,
       })
 
@@ -56,7 +54,11 @@ return {
         },
       })
 
-      -- TypeScript & JavaScript 
+      lspconfig.templ.setup({
+        capabilities = cap,
+      })
+
+      -- TypeScript & JavaScript
       lspconfig.ts_ls.setup({
         capabilities = cap,
       })
@@ -74,6 +76,11 @@ return {
             checkOnSave = { command = "clippy" },
           },
         },
+      })
+
+      -- jinja_lsp
+      lspconfig.jinja_lsp.setup({
+        capabilities = cap,
       })
 
       -- Keybindings for LSP
